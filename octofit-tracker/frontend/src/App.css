@@ -1,0 +1,144 @@
+/* App.css - OctoFit Tracker custom styles */
+
+
+body {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e3e6f3 100%);
+  color: #3a2d4d;
+  min-height: 100vh;
+}
+
+
+.navbar {
+  background: linear-gradient(90deg, #563d7c 0%, #7c5fe6 100%) !important;
+  box-shadow: 0 2px 8px rgba(86,61,124,0.08);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 38px;
+  margin-right: 12px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(86,61,124,0.10);
+}
+
+.navbar-nav .nav-link {
+  color: #e0d6f7 !important;
+  font-weight: 500;
+  margin-right: 8px;
+  transition: color 0.2s;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+  color: #ffd86b !important;
+}
+
+
+.navbar {
+  margin-bottom: 2rem;
+}
+
+
+.card {
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px rgba(86,61,124,0.08);
+  border: 1px solid #e3e6f3;
+  background: #fff8fc;
+}
+
+
+.table th, .table td {
+  vertical-align: middle;
+}
+.table thead {
+  background: linear-gradient(90deg, #7c5fe6 0%, #ffd86b 100%);
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f3eaff;
+}
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #fff8fc;
+}
+
+
+.btn-primary {
+  background: linear-gradient(90deg, #563d7c 0%, #7c5fe6 100%);
+  border: none;
+  color: #fff;
+}
+.btn-success {
+  background: linear-gradient(90deg, #00c9a7 0%, #ffd86b 100%);
+  border: none;
+  color: #563d7c;
+}
+.btn-info {
+  background: linear-gradient(90deg, #7c5fe6 0%, #00c9a7 100%);
+  border: none;
+  color: #fff;
+}
+.btn-danger {
+  background: linear-gradient(90deg, #ff6b6b 0%, #ffd86b 100%);
+  border: none;
+  color: #fff;
+}
+.btn {
+  min-width: 110px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(86,61,124,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover, .btn:focus {
+  filter: brightness(1.08);
+  color: #fff !important;
+}
+
+
+h2, h3, h4 {
+  color: #7c5fe6;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+
+.list-group-item {
+  background: #fff8fc;
+  border: 1px solid #e3e6f3;
+  color: #563d7c;
+}
+
+
+.modal-content {
+  border-radius: 1rem;
+  background: #fff8fc;
+  border: 1px solid #e3e6f3;
+}
+
+
+.form-label {
+  font-weight: 500;
+  color: #7c5fe6;
+}
+
+
+.form-control:focus {
+  border-color: #7c5fe6;
+  box-shadow: 0 0 0 0.2rem rgba(124,95,230,.15);
+}
+
+a {
+  color: #7c5fe6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover, a:focus {
+  color: #00c9a7;
+  text-decoration: underline;
+}

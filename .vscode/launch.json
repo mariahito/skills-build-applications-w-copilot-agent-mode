@@ -28,6 +28,13 @@
       "env": {
         "REACT_APP_CODESPACE_NAME": "${env:CODESPACE_NAME}"
       }
+    },
+    {
+      "name": "React: Debug in Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/octofit-tracker/frontend/src"
     }
   ]
 }
