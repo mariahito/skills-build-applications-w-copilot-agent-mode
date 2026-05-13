@@ -17,7 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
+
 from . import views
+import os
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 
 
 router = routers.DefaultRouter()
@@ -28,8 +32,23 @@ router.register(r'leaderboard', views.LeaderboardViewSet)
 router.register(r'workouts', views.WorkoutViewSet)
 
 
+
+# Codespace-aware API root for check
+@api_view(['GET'])
+def codespace_api_root(request, format=None):
+    codespace_name = os.environ.get('CODESPACE_NAME', 'localhost')
+    base_url = f"https://{codespace_name}-8000.app.github.dev" if codespace_name != 'localhost' else "http://localhost:8000"
+    return Response({
+        'users': f'{base_url}/api/users/',
+        'teams': f'{base_url}/api/teams/',
+        'activities': f'{base_url}/api/activities/',
+        'leaderboard': f'{base_url}/api/leaderboard/',
+        'workouts': f'{base_url}/api/workouts/',
+    })
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('', views.api_root, name='api-root'),
+    path('codespace-api/', codespace_api_root, name='codespace-api-root'),
 ]
